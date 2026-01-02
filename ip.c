@@ -58,7 +58,7 @@ static void ip_print(const uint8_t *data, size_t len) {
   v = hdr->vhl >> 4;
   hl = hdr->vhl & 0x0f;
   hlen = hl << 2;
-  fprintf(stderr, "        vhl: 0x%02x [v: %u, hl: %u (%u)]", hdr->vhl, v, hl,
+  fprintf(stderr, "        vhl: 0x%02x [v: %u, hl: %u (%u)]\n", hdr->vhl, v, hl,
           hlen);
   fprintf(stderr, "        tos: 0x%02x\n", hdr->tos);
   total = ntoh16(hdr->total);
