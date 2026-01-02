@@ -63,7 +63,7 @@ static void ip_print(const uint8_t *data, size_t len) {
   fprintf(stderr, "        tos: 0x%02x\n", hdr->tos);
   total = ntoh16(hdr->total);
   fprintf(stderr, "      total: %u (payload %u)\n", total, total - hlen);
-  fprintf(stderr, "         id: 0x%04x\n", ntoh16(hdr->id));
+  fprintf(stderr, "         id: %u\n", ntoh16(hdr->id));
   offset = ntoh16(hdr->offset);
   fprintf(stderr, "     offset: 0x%04x [flags: %x, offset: %u]\n", offset,
           offset >> 13, offset & IP_HDR_OFFSET_MASK);
